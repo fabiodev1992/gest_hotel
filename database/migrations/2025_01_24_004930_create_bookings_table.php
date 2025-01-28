@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('paymentmethode');
             $table->foreignId('costomer_id')->constrained();
             $table->foreignId('room_id')->constrained();
+            $table->foreignId('user_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
