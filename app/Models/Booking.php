@@ -20,7 +20,7 @@ class Booking extends Model
             'room_id',
             'user_id',
     ];
-/*Les relations*/
+/*Les relations* plusieur à plusieur */
     public function costomer(): BelongsTo
     {
         return $this->belongsTo(Costomer::class);
@@ -31,6 +31,7 @@ class Booking extends Model
         return $this->belongsTo(Room::class);
 
     }
+    /*un user peut faire plusieurs reservation*/
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
